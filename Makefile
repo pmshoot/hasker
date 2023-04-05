@@ -19,13 +19,8 @@ prepare_nginx:
 	/etc/init.d/nginx start
 
 prepare_django:
-	#cd /hasker/hasker
 	DJANGO_SETTINGS_MODULE=core.settings.prod python3 /hasker/hasker/manage.py migrate
 	DJANGO_SETTINGS_MODULE=core.settings.prod python3 /hasker/hasker/manage.py collectstatic --noinput
 
-tests:
-	#cd /hasker/hasker
-	DJANGO_SETTINGS_MODULE=core.settings.prod python3 /hasker/hasker/manage.py tests
-
-.PHONY: prepare_sys prepare_wsgi prepare_db prepare_nginx prepare_django tests prod
+.PHONY: prepare_sys prepare_wsgi prepare_db prepare_nginx prepare_django prod
 

@@ -9,14 +9,16 @@ docker run --rm -it -p 8000:80 ubuntu:latest /bin/bash
 ```
 2. клонируется репозиторий 
 ```shell
-git clone https://github.com/pmshoot/otus-pythonpro-2022-11/tree/main/homeworks/lesson07 /hasker
+apt update && apt install -y git
+git clone https://github.com/pmshoot/hasker /hasker
 ```
 3. заходим в директорию проекта 
 ```shell
-cd hasker
+cd /hasker
 ```
 4. собираем и запускаем проект
 ```shell
+apt install -y make
 make prod
 ``` 
 
